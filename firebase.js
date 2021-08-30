@@ -2,13 +2,12 @@ import firebase from "firebase";
 import "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBfRnUAClA1ajM-gWilF6ETTB739o2chrQ",
-  authDomain: "clone-with-reactjs-98.firebaseapp.com",
-  projectId: "clone-with-reactjs-98",
-  storageBucket: "clone-with-reactjs-98.appspot.com",
-  messagingSenderId: "98055504147",
-  appId: "1:98055504147:web:1a206a2e1f86dc01a19ae6",
-  measurementId: "G-CC3PXGBC04"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig): firebase.app();
